@@ -17,6 +17,7 @@ urlpatterns = [
     # User management
     url(r'^users/', include("adminpanel.users.urls", namespace="users")),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^nextgensbl/', include('nextgensbl.users2.urls', namespace="nextgensbl")),
 
     # Your stuff: custom urls includes go here
 

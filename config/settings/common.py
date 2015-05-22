@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'adminpanel.users',  # custom users app
+    'nextgensbl.users2',
     # Your stuff: custom apps go here
 )
 
@@ -102,7 +103,8 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'default': env.db("DATABASE_URL", default="postgres://localhost/adminpanel"),
+    'default': env.db("DATABASE_URL", default="postgres://admin:admin@localhost/adminpanel"),
+    # "postgres://localhost/adminpanel",
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
